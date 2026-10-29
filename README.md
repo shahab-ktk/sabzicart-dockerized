@@ -108,7 +108,7 @@ Open PowerShell in the project root---the directory containing
 `Dockerfile`, `package.json`, and `server.js`. For example:
 
 ``` powershell
-cd "F:\DevOPS BOOTCAMP\App"
+cd "D:\Node App Container\App"
 ```
 
 Build the image:
