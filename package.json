@@ -1,0 +1,14 @@
+{
+  "name": "sabzicart",
+  "version": "1.0.0",
+  "description": "Simple vegetable shopping website with WhatsApp ordering",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^5.3.0"
+  },
+  "author": "",
+  "license": "ISC"
+}

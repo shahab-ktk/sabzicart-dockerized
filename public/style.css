@@ -1,0 +1,483 @@
+/* =========================
+   Global Styles
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f8faf7;
+    color: #263326;
+}
+
+button,
+input,
+select {
+    font: inherit;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible {
+    outline: 3px solid #82a982;
+    outline-offset: 3px;
+}
+
+
+/* =========================
+   Navbar
+========================= */
+
+.navbar {
+    min-height: 70px;
+    padding: 0 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: #315c35;
+}
+
+.tagline {
+    color: #647264;
+    font-size: 15px;
+}
+
+
+/* =========================
+   Hero Section
+========================= */
+
+.hero {
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    padding: 70px 10%;
+
+    background:
+        linear-gradient(
+            rgba(247, 250, 244, 0.90),
+            rgba(247, 250, 244, 0.90)
+        ),
+        url("images/vegetables.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.small-title {
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #315c35;
+}
+
+.hero h1 {
+    font-size: clamp(40px, 6vw, 70px);
+    line-height: 1.08;
+    margin-bottom: 25px;
+    color: #263326;
+}
+
+.hero h1 span {
+    font-weight: 400;
+}
+
+.hero p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #5c665c;
+}
+
+.shop-btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 15px 30px;
+    background: #315c35;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.shop-btn:hover {
+    background: #244829;
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   Products Section
+========================= */
+
+.products-section {
+    padding: 80px 7%;
+    overflow: hidden;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-heading p {
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #557a57;
+}
+
+.section-heading h2 {
+    font-size: clamp(28px, 4vw, 38px);
+    margin-top: 8px;
+}
+
+
+/* Slider Container */
+
+.slider-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+}
+
+/* Clips cards while they slide */
+
+.slider-viewport {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+}
+
+/* JavaScript moves this track horizontally */
+
+.product-slider {
+    display: flex;
+    width: 100%;
+    gap: 25px;
+    transform: translateX(0);
+    transition: transform 0.35s ease;
+}
+
+
+/* Product Cards */
+
+.product-card {
+    flex: 0 0 calc((100% - 50px) / 3);
+    min-width: 0;
+    background: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    transition: box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+}
+
+.product-image {
+    display: block;
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    background: #edf2e9;
+}
+
+.product-info {
+    padding: 20px;
+}
+
+.product-info h3 {
+    font-size: 21px;
+    margin-bottom: 8px;
+}
+
+.price {
+    color: #557a57;
+    font-weight: bold;
+    margin-bottom: 18px;
+}
+
+.order-btn {
+    width: 100%;
+    border: none;
+    padding: 13px;
+    border-radius: 10px;
+    cursor: pointer;
+    background: #315c35;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: bold;
+    transition: background 0.2s ease;
+}
+
+.order-btn:hover {
+    background: #244829;
+}
+
+
+/* Slider Navigation Buttons */
+
+.slider-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    flex-shrink: 0;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    background: #315c35;
+    color: #ffffff;
+    font-size: 20px;
+    transition: background 0.2s ease, opacity 0.2s ease;
+}
+
+.slider-btn:hover:not(:disabled) {
+    background: #244829;
+}
+
+.slider-btn:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+}
+
+
+/* =========================
+   Order Section
+========================= */
+
+.order-section {
+    padding: 80px 7%;
+    display: flex;
+    justify-content: center;
+    scroll-margin-top: 80px;
+}
+
+.order-box {
+    width: 100%;
+    max-width: 600px;
+    padding: 40px;
+    background: #ffffff;
+    border-radius: 25px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+}
+
+.order-box h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.order-box p {
+    color: #687168;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+#orderForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#orderForm select,
+#orderForm input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #dce2dc;
+    border-radius: 10px;
+    background: #ffffff;
+    color: #263326;
+    font-size: 16px;
+}
+
+#orderForm select:focus,
+#orderForm input:focus {
+    border-color: #557a57;
+}
+
+#orderForm button {
+    padding: 16px;
+    border: none;
+    border-radius: 10px;
+    background: #315c35;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+#orderForm button:hover {
+    background: #244829;
+}
+
+
+/* =========================
+   Footer
+========================= */
+
+footer {
+    text-align: center;
+    padding: 45px 20px;
+    background: #263326;
+    color: #ffffff;
+}
+
+.footer-logo {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+footer p {
+    opacity: 0.8;
+    line-height: 1.7;
+}
+
+.copyright {
+    margin-top: 25px;
+    font-size: 13px;
+}
+
+
+/* =========================
+   Tablet and Mobile
+========================= */
+
+@media (max-width: 800px) {
+
+    .navbar {
+        min-height: 65px;
+        padding: 0 5%;
+    }
+
+    .tagline {
+        display: none;
+    }
+
+    .hero {
+        min-height: 420px;
+        padding: 60px 7%;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .products-section {
+        padding: 60px 5%;
+    }
+
+    .section-heading {
+        margin-bottom: 30px;
+    }
+
+    /* Show one product at a time */
+
+    .product-slider {
+        gap: 15px;
+    }
+
+    .product-card {
+        flex-basis: 100%;
+    }
+
+    .product-image {
+        height: 260px;
+    }
+
+    /* Keep slider buttons working on mobile */
+
+    .slider-btn {
+        display: flex;
+        width: 36px;
+        height: 36px;
+        font-size: 16px;
+    }
+
+    .slider-container {
+        gap: 8px;
+    }
+
+    .order-section {
+        padding: 60px 5%;
+    }
+
+    .order-box {
+        padding: 25px;
+    }
+}
+
+
+/* =========================
+   Small Mobile Screens
+========================= */
+
+@media (max-width: 400px) {
+
+    .logo {
+        font-size: 22px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .section-heading h2 {
+        font-size: 27px;
+    }
+
+    .product-image {
+        height: 220px;
+    }
+
+    .product-info {
+        padding: 16px;
+    }
+
+    .order-box h2 {
+        font-size: 26px;
+    }
+}
+
+
+/* Respect reduced-motion preferences */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}

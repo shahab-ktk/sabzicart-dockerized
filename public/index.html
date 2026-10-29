@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SabziCart | Fresh Vegetables</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            🥬 SabziCart
+        </div>
+
+        <div class="tagline">
+            Fresh Vegetables Delivered
+        </div>
+    </header>
+
+
+    <main>
+
+        <section class="hero">
+
+            <div class="hero-content">
+                <p class="small-title">100% Fresh & Healthy</p>
+
+                <h1>
+                    Fresh Vegetables<br>
+                    <span>For Your Family</span>
+                </h1>
+
+                <p>
+                    Choose your favorite vegetables and order
+                    directly through WhatsApp.
+                </p>
+
+                <a href="#vegetables" class="shop-btn">
+                    Shop Now
+                </a>
+            </div>
+
+        </section>
+
+
+        <section id="vegetables" class="products-section">
+
+            <div class="section-heading">
+                <p>OUR PRODUCTS</p>
+                <h2>Fresh From Farm 🥕</h2>
+            </div>
+
+        <div class="slider-container">
+         <button class="slider-btn prev"
+            onclick="previousSlide()">❮</button>
+
+         <div class="slider-viewport">
+        <div id="productSlider" class="product-slider"></div>
+                </div>
+
+         <button class="slider-btn next"
+            onclick="nextSlide()">❯</button>
+                </div>
+        </section>
+
+
+        <section class="order-section">
+
+            <div class="order-box">
+
+                <h2>Order Fresh Vegetables</h2>
+
+                <p>
+                    Select a vegetable and contact us on WhatsApp.
+                </p>
+
+                <form id="orderForm">
+
+                    <select id="vegetable" required>
+                        <option value="">Select Vegetable</option>
+                    </select>
+
+                    <input
+                        type="text"
+                        id="customerName"
+                        placeholder="Your Name"
+                    >
+
+                    <input
+                        type="text"
+                        id="quantity"
+                        placeholder="Quantity e.g. 2 kg"
+                        required
+                    >
+
+                    <button type="submit">
+                        Order on WhatsApp 📱
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <div class="footer-logo">
+            🥬 SabziCart
+        </div>
+
+        <p>
+            Fresh vegetables. Simple ordering.
+        </p>
+        <p class="creator">
+    Created and Deployed by <strong>Muhammad Shahab</strong>
+        </p>
+
+        <p class="copyright">
+            © 2026 SabziCart. All rights reserved.
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
